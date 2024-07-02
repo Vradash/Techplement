@@ -1,5 +1,4 @@
 import {useState,useEffect} from 'react';
-import { redirect } from 'react-router-dom';
 import axios from 'axios';
 
 const Auth = (props) => {
@@ -19,7 +18,7 @@ const Auth = (props) => {
     }
 
     useEffect(() => {
-        axios.post("http://localhost:5000/api/user/register",{
+        axios.post("https://quotegenrator-a4pe.onrender.com/api/user/register",{
             name: userData.name,
             email: userData.email,
             password: userData.password,
@@ -29,12 +28,12 @@ const Auth = (props) => {
     },[onSubmit])
     
     useEffect(() => {
-        axios.post(`http://localhost:5000/api/user/login`,{
+        axios.post(`https://quotegenrator-a4pe.onrender.com/api/user/login`,{
             name: userData.name,
             password: userData.password,
         })
         .then(res=>(alert("User Logged In Successfully")))
-        .catch(err=>(console.log(err.message)))
+        .catch(err=>(alert("Invalid credentials")))
     },[onLogIn])
 
     const handleSubmit=()=>{
