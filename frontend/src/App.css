@@ -1,0 +1,273 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Felipa&display=swap'); */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Comfortaa", sans-serif;
+}
+
+body {
+  font-family: 'Crimson Pro', serif;
+  /* font-family: Arial, sans-serif; */
+  background: rgb(109, 178, 235);
+  height: 100vh;
+  margin: 0;
+}
+
+/* Navbar */
+.navbar{
+  width: 100%;
+  position: sticky;
+  top: 0;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: rgb(23,124,229); */
+  background-color: rgb(69, 135, 189);;
+  padding: 10px 30px;
+}
+
+.wrapper{
+  position: absolute;
+  top: 10%;
+  left: 35%;
+}
+
+.search-box{
+  position: relative;
+  border-radius: 23px;
+
+}
+
+.search-txt{
+  /* position: relative; */
+  border: 3px solid;
+  border-color: blue;
+  height: 40px;
+  width: 350px;
+  border-radius: 40px;
+  padding-left: 15px;
+  font-size: 18px;
+}
+
+.search-txt:focus{
+  outline: none;
+}
+
+.icon{
+  position: absolute;
+  color: rgb(49, 6, 245);
+  top: 13px; 
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.sugg-box{
+  position: relative;
+  padding: 0px;
+  background: rgba(255, 255, 255);
+  max-width: 355px; 
+  max-height: 280px;
+  overflow-x: visible;
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+.sugg-box li{
+  list-style: none;
+  padding: 8px 12px;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+
+.search-box.active .sugg-box li{   /* space between .active and .suggbox is necessary*/
+  display: block;
+}
+
+.sugg-box :hover{
+  background: rgba(128, 128, 128, 0.301);
+}
+
+.login-button{
+  background: rgb(23,124,229);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 25px;
+  border: 2px solid rgba(181, 229, 23, 0.55);
+  width: 100px;
+  height: 35px;
+  cursor: pointer;
+  font-family: "Fresca", sans-serif;
+}
+
+/* Quotes */
+
+.quotecard-wrapper{
+  background: #fff;
+  width: 60%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0px rgb(0,0,0,0.15);
+}
+
+.quotecard-content h3{
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.quote-wrapper{
+  background: #fff;
+  width: 700px;
+  margin: auto;
+  margin-top: 10vh;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 20px 0px rgb(0,0,0,0.15);
+}
+
+.quote-wrapper h2{
+  font-size: 32px;
+  margin-bottom: 40px;
+  position: relative;
+  font-family: "Oleo Script", system-ui;
+}
+
+.quote-wrapper h2::after{
+  content: '';
+  width: 75px;
+  height:3px;
+  border-radius: 3px;
+  background: rgb(23,124,229);
+  position: absolute;
+  bottom: -10px;
+  margin: auto;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.quote-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.quote-content h3{
+  font-size: 26px;
+  height: 80px;
+}
+
+.quote-content h4{
+  right: 0px;
+  margin-right: 0px;
+}
+
+.quote-wrapper button{
+  background: rgb(23,124,229);
+  color: #fff;
+  border-radius: 25px;
+  border: 1px solid rgb(23,124,229);
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-family: "Fresca", sans-serif;
+  margin: auto;
+} 
+
+.quote-buttons{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.invisible{
+  display: none;
+}
+
+.com-icon a{
+  font-family: 'Tangerine', cursive;
+  text-decoration: none;
+  color: black;
+}
+
+/* Auth */
+.userContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(243, 243, 243,0.5);
+  margin: auto;
+  margin-top: 10vh;
+  width: 90%;
+  border: 2px solid black;
+  /* border-radius: 5%; */
+  padding-bottom: 20px;
+}
+
+.head{
+  margin-top: 30px;
+  font-size: 35px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #3c009d;
+}
+
+.user input{
+  margin-top: 30px;
+  font-size: 15px;
+  height: 35px;
+  width: 350px;
+}
+
+.forgotpass{
+  color: #3c009d;
+  cursor: pointer;
+  margin: 20px 0 0 300px;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap;
+  align-content: space-between; */
+  gap: 30px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.buttons button{
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #3c009d;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* .buttons .gray{
+  color: #676767;
+  background-color: #EAEAEA;
+  border-color: #EAEAEA; */
+  /* outline: none;
+} */
+
+.buttons .invisible{
+  display: none;
+}
+
+
